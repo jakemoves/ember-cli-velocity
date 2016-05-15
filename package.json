@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-velocity-prism",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "EmberCLI Addon wrapper for Velocity.js with bugfixes for Prism",
   "directories": {
     "doc": "doc",
@@ -36,7 +36,7 @@
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "ember-try": "~0.0.8",
-    "velocity-animate-prism": "1.2.4"
+    "velocity-animate-prism": "1.2.5"
   },
   "keywords": [
     "ember-addon"
