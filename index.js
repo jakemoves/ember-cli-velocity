@@ -7,14 +7,14 @@ var mergeTrees = require('broccoli-merge-trees');
 var pickFiles = require('broccoli-static-compiler');
 
 module.exports = {
-  name: 'ember-cli-velocity',
+  name: 'ember-cli-velocity-prism',
 
   treeForVendor: function treeForVendor() {
      var emberCliVelocity = unwatchedTree(path.join(__dirname, 'vendor'));
-     var velocityAnimate = pickFiles(unwatchedTree(require.resolve('velocity-animate').replace('velocity.js', '')), {
+     var velocityAnimate = pickFiles(unwatchedTree(require.resolve('velocity-animate-prism').replace('velocity.js', '')), {
        srcDir: '/',
        files: ['*.js'],
-       destDir: 'velocity-animate'
+       destDir: 'velocity-animate-prism'
     });
     return mergeTrees([emberCliVelocity, velocityAnimate]);
   },
@@ -43,9 +43,9 @@ module.exports = {
       return;
     }
 
-    app.import('vendor/velocity-animate/velocity.js');
+    app.import('vendor/velocity-animate-prism/velocity.js');
     if (options.ui) {
-      app.import('vendor/velocity-animate/velocity.ui.js');
+      app.import('vendor/velocity-animate-prism/velocity.ui.js');
     }
     app.import('vendor/ember-cli-velocity/velocity-promise-shim.js');
   }
